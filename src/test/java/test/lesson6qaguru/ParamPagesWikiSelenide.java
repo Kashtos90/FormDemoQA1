@@ -46,7 +46,8 @@ public class ParamPagesWikiSelenide {
     )
     @ParameterizedTest(name = "Interface check Pages - Wiki (Git-Selenide) \"{0}\"")
     void checkPagesTest(String checkPages) {
-        $("#wiki-pages-box").$(".js-wiki-more-pages-link").click();                                            //Разворачиваем список дополнительных меню
+        $("#wiki-pages-box").$(".js-wiki-more-pages-link").click();                                            
+        //Разворачиваем список дополнительных меню
         $("#wiki-pages-box").shouldHave(text(checkPages)).$(byText(checkPages)).click();
         $("#wiki-wrapper").shouldHave(text(checkPages));
     }
@@ -74,7 +75,8 @@ public class ParamPagesWikiSelenide {
 
     @ParameterizedTest(name = "Interface check Pages Wiki (Git-Selenide) Includes \"{0}\"")
     void compliteCheckPagesTest(String checkPages, String checkIncludes) {
-        $("#wiki-pages-box").$(".js-wiki-more-pages-link").click();                                            //Разворачиваем список дополнительных меню
+        $("#wiki-pages-box").$(".js-wiki-more-pages-link").click();                                            
+        //Разворачиваем список дополнительных меню
         $("#wiki-pages-box").shouldHave(text(checkPages)).$(byText(checkPages)).click();
         $("#wiki-wrapper").shouldHave(text(checkPages)).shouldHave(text(checkIncludes));
 
